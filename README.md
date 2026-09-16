@@ -1,0 +1,2 @@
+# Corporate_Holiday_Party_Office_Event_Planner
+Automated website repository for Corporate_Holiday_Party_Office_Event_Planner
