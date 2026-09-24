@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Event Dashboard | Vanta Events</title>
+  <meta name="description" content="Manage corporate event planning, venue booking statuses, vendor coordination, RSVP headcounts, and budget tracking.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%237C3AED'/%3E%3Cpath d='M23 27h54L50 76z' fill='none' stroke='%23F4D06F' stroke-width='8' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='52' r='6' fill='%23F4D06F'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-logo"></div>
+  </div>
+
+  <!-- DASHBOARD PAGE -->
+  <section class="dashboard-page active" id="dashboard">
+    <div class="dashboard-layout">
+      <!-- SIDEBAR -->
+      <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="dashboard-brand">
+          <a class="logo" href="dashboard.html">
+            <div class="logo-mark"></div>
+            <div class="logo-name">
+              Vanta<span>Events</span>
+            </div>
+          </a>
+        </div>
+        <div class="dashboard-nav">
+          <button class="dashboard-link active" data-view="overview">
+            Overview
+          </button>
+          <button class="dashboard-link" data-view="requirements">
+            Event Requirements
+          </button>
+          <button class="dashboard-link" data-view="venues">
+            Venue &amp; Booking
+          </button>
+          <button class="dashboard-link" data-view="vendors">
+            Vendors &amp; Services
+          </button>
+          <button class="dashboard-link" data-view="rsvp">
+            RSVP &amp; Headcount
+          </button>
+          <button class="dashboard-link" data-view="budget">
+            Budget Tracking
+          </button>
+          <div class="dashboard-separator"></div>
+          <button class="dashboard-link" id="dashboardTheme">
+            ☾ Theme
+          </button>
+          <button class="dashboard-link" id="dashboardRtl">
+            RTL Layout
+          </button>
+          <a class="dashboard-link" href="index.html">
+            Back To Website
+          </a>
+          <a class="dashboard-link" href="login.html">
+            Logout
+          </a>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="dashboard-main">
+        <header class="dashboard-top">
+          <div style="display:flex;align-items:center;gap:11px">
+            <button class="dashboard-menu" id="dashboardMenu" aria-label="Open dashboard menu" title="Open dashboard menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <h2 id="dashboardTitle">Overview</h2>
+          </div>
+          <div class="dashboard-user">
+            <div class="dashboard-user-info">
+              <strong>Event Manager</strong>
+              <span>Corporate Planning</span>
+            </div>
+            <div class="dashboard-avatar">VE</div>
+          </div>
+        </header>
+
+        <div class="dashboard-content">
+          <!-- 1 OVERVIEW VIEW -->
+          <div class="dashboard-view active" id="view-overview">
+            <div class="dashboard-welcome">
+              <h1>Welcome to your event dashboard</h1>
+              <p>
+                Track requirements, bookings, vendors,
+                guest headcount and event budgets from one place.
+              </p>
+            </div>
+            <div class="dashboard-stats">
+              <div class="dashboard-stat">
+                <small>Active Events</small>
+                <strong>08</strong>
+                <span>2 new this month</span>
+              </div>
+              <div class="dashboard-stat">
+                <small>Total Guests</small>
+                <strong>1,248</strong>
+                <span>14% increase</span>
+              </div>
+              <div class="dashboard-stat">
+                <small>RSVP Confirmed</small>
+                <strong>86%</strong>
+                <span>6.4% increase</span>
+              </div>
+              <div class="dashboard-stat">
+                <small>Budget Used</small>
+                <strong>68%</strong>
+                <span>Within target</span>
+              </div>
+            </div>
+            <div class="dashboard-grid">
+              <div class="dashboard-panel">
+                <h3>Upcoming Events</h3>
+                <div class="event-row">
+                  <div>
+                    <strong>Annual Holiday Gala</strong>
+                    <small>18 December · 350 guests</small>
+                  </div>
+                  <span class="status confirmed">Confirmed</span>
+                </div>
+                <div class="event-row">
+                  <div>
+                    <strong>Leadership Dinner</strong>
+                    <small>04 January · 42 guests</small>
+                  </div>
+                  <span class="status pending">Pending</span>
+                </div>
+                <div class="event-row">
+                  <div>
+                    <strong>Team Celebration</strong>
+                    <small>22 January · 120 guests</small>
+                  </div>
+                  <span class="status review">Review</span>
+                </div>
+              </div>
+              <div class="dashboard-panel">
+                <h3>Monthly Planning Activity</h3>
+                <div class="chart">
+                  <div class="bar" style="height:42%">
+                    <span>Aug</span>
+                  </div>
+                  <div class="bar" style="height:55%">
+                    <span>Sep</span>
+                  </div>
+                  <div class="bar" style="height:68%">
+                    <span>Oct</span>
+                  </div>
+                  <div class="bar" style="height:61%">
+                    <span>Nov</span>
+                  </div>
+                  <div class="bar" style="height:86%">
+                    <span>Dec</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 REQUIREMENTS VIEW -->
+          <div class="dashboard-view" id="view-requirements">
+            <div class="dashboard-panel">
+              <h3>Event Requirements</h3>
+              <div class="event-row">
+                <div>
+                  <strong>Annual Holiday Gala</strong>
+                  <small>Guest count · 350</small>
+                </div>
+                <span class="status confirmed">Complete</span>
+              </div>
+              <div class="event-row">
+                <div>
+                  <strong>Catering Requirement</strong>
+                  <small>Premium buffet + dietary options</small>
+                </div>
+                <span class="status confirmed">Complete</span>
+              </div>
+              <div class="event-row">
+                <div>
+                  <strong>Entertainment</strong>
+                  <small>DJ + live performance</small>
+                </div>
+                <span class="status review">Review</span>
+              </div>
+              <div class="event-row">
+                <div>
+                  <strong>Event Branding</strong>
+                  <small>Stage and welcome branding</small>
+                </div>
+                <span class="status pending">Pending</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 VENUES VIEW -->
+          <div class="dashboard-view" id="view-venues">
+            <div class="dashboard-panel">
+              <h3>Venue &amp; Booking Status</h3>
+              <div class="event-row">
+                <div>
+                  <strong>Grand Ballroom</strong>
+                  <small>Capacity · 500 · Premium</small>
+                </div>
+                <span class="status confirmed">Booked</span>
+              </div>
+              <div class="event-row">
+                <div>
+                  <strong>Skyline Terrace</strong>
+                  <small>Capacity · 250 · Outdoor</small>
+                </div>
+                <span class="status review">Shortlisted</span>
+              </div>
+              <div class="event-row">
+                <div>
+                  <strong>Heritage Hall</strong>
+                  <small>Capacity · 180 · Elegant</small>
+                </div>
+                <span class="status pending">Negotiating</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 VENDORS VIEW -->
+          <div class="dashboard-view" id="view-vendors">
+            <div class="dashboard-stats">
+              <div class="dashboard-stat">
+                <small>Active Vendors</small>
+                <strong>14</strong>
+                <span>10 confirmed</span>
+              </div>
+              <div class="dashboard-stat">
+                <small>Confirmed</small>
+                <strong>10</strong>
+                <span>On schedule</span>
+              </div>
+              <div class="dashboard-stat">
+                <small>Under Review</small>
+                <strong>03</strong>
+                <span>Need approval</span>
+              </div>
+              <div class="dashboard-stat">
+                <small>Pending</small>
+                <strong>01</strong>
+                <span>Follow-up required</span>
+              </div>
+            </div>
+            <div class="dashboard-panel">
+              <h3>Vendor Tracking</h3>
+              <div class="event-row">
+                <div>
+                  <strong>Venue Partner</strong>
+                  <small>Grand Ballroom</small>
+                </div>
+                <span class="status confirmed">Confirmed</span>
+              </div>
+              <div class="event-row">
+                <div>
+                  <strong>Catering Partner</strong>
+                  <small>350 guest curated menu</small>
+                </div>
+                <span class="status confirmed">Confirmed</span>
+              </div>
+              <div class="event-row">
+                <div>
+                  <strong>Entertainment Agency</strong>
+                  <small>DJ + Live Performance</small>
+                </div>
+                <span class="status review">Review</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 RSVP VIEW -->
+          <div class="dashboard-view" id="view-rsvp">
+            <div class="dashboard-stats">
+              <div class="dashboard-stat">
+                <small>Invited</small>
+                <strong>420</strong>
+              </div>
+              <div class="dashboard-stat">
+                <small>Confirmed</small>
+                <strong>362</strong>
+              </div>
+              <div class="dashboard-stat">
+                <small>Maybe</small>
+                <strong>31</strong>
+              </div>
+              <div class="dashboard-stat">
+                <small>No Response</small>
+                <strong>27</strong>
+              </div>
+            </div>
+            <div class="dashboard-panel">
+              <h3>RSVP &amp; Headcount Tracking</h3>
+              <div class="event-row">
+                <div>
+                  <strong>Guest Confirmation</strong>
+                  <small>86% of invited guests confirmed</small>
+                </div>
+                <span class="status confirmed">On Track</span>
+              </div>
+              <div class="event-row">
+                <div>
+                  <strong>Dietary Information</strong>
+                  <small>74% of confirmed guests updated</small>
+                </div>
+                <span class="status review">Review</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 BUDGET VIEW -->
+          <div class="dashboard-view" id="view-budget">
+            <div class="dashboard-stats">
+              <div class="dashboard-stat">
+                <small>Total Budget</small>
+                <strong>₹12.0L</strong>
+              </div>
+              <div class="dashboard-stat">
+                <small>Committed</small>
+                <strong>₹8.1L</strong>
+              </div>
+              <div class="dashboard-stat">
+                <small>Remaining</small>
+                <strong>₹3.9L</strong>
+              </div>
+              <div class="dashboard-stat">
+                <small>Budget Used</small>
+                <strong>68%</strong>
+              </div>
+            </div>
+            <div class="dashboard-panel">
+              <h3>Budget &amp; Expense Breakdown</h3>
+              <div class="event-row">
+                <div>
+                  <strong>Venue Booking &amp; Permits</strong>
+                  <small>₹3.20L</small>
+                </div>
+                <span class="status confirmed">Approved</span>
+              </div>
+              <div class="event-row">
+                <div>
+                  <strong>Catering &amp; Hospitality</strong>
+                  <small>₹2.80L</small>
+                </div>
+                <span class="status confirmed">Approved</span>
+              </div>
+              <div class="event-row">
+                <div>
+                  <strong>Entertainment &amp; Artists</strong>
+                  <small>₹1.20L</small>
+                </div>
+                <span class="status review">Review</span>
+              </div>
+              <div class="event-row">
+                <div>
+                  <strong>Production, AV &amp; Décor</strong>
+                  <small>₹0.90L</small>
+                </div>
+                <span class="status confirmed">Approved</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

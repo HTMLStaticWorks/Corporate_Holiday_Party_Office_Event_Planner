@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Corporate Account | Vanta Events</title>
+  <meta name="description" content="Register your company account with Vanta Events to initiate bespoke corporate holiday party planning, vendor contracting, and event production.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%237C3AED'/%3E%3Cpath d='M23 27h54L50 76z' fill='none' stroke='%23F4D06F' stroke-width='8' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='52' r='6' fill='%23F4D06F'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-logo"></div>
+  </div>
+
+  <!-- AUTH PAGE -->
+  <section class="auth-page" id="signup">
+    <div class="auth-controls">
+      <button class="control-btn" id="signupRtl" aria-label="Toggle RTL layout">RTL</button>
+      <button class="control-btn" id="signupTheme" aria-label="Toggle dark mode">☾</button>
+    </div>
+
+    <div class="auth-box">
+      <a class="logo auth-logo" href="index.html" aria-label="Vanta Events Home">
+        <div class="logo-mark"></div>
+        <div class="logo-name">
+          Vanta<span>Events</span>
+        </div>
+      </a>
+
+      <div class="auth-card">
+        <h1>Create Account</h1>
+        <p>Start managing your corporate events.</p>
+
+        <form id="signupForm">
+          <div class="form-group">
+            <label for="signupName">Full Name</label>
+            <input
+              id="signupName"
+              type="text"
+              required
+              placeholder="Your full name">
+          </div>
+          <div class="form-group">
+            <label for="signupEmail">Work Email</label>
+            <input
+              id="signupEmail"
+              type="email"
+              required
+              placeholder="you@company.com">
+          </div>
+          <div class="form-group">
+            <label for="signupPassword">Password</label>
+            <input
+              id="signupPassword"
+              type="password"
+              required
+              placeholder="Create password">
+          </div>
+
+          <label class="remember" style="align-items:flex-start;margin:8px 0 20px">
+            <input type="checkbox" required style="margin-top:1px">
+            <span>I agree to the Terms and Privacy Policy.</span>
+          </label>
+
+          <button class="btn btn-primary auth-submit" type="submit">
+            Create Account
+          </button>
+        </form>
+
+        <div class="auth-switch">
+          Already have an account?
+          <a href="login.html">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- SCRIPT -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

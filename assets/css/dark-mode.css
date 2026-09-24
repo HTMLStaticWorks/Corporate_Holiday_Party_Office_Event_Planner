@@ -1,0 +1,68 @@
+/* =========================================================
+   VANTA EVENTS - DARK MODE STYLES
+   ========================================================= */
+
+[data-theme="dark"] {
+  --bg: #070B15;
+  --surface: #101625;
+  --surface-2: #151D30;
+  --text: #F6F8FF;
+  --text-soft: #C1C9DA;
+  --muted: #9BA5BA;
+  --border: rgba(255, 255, 255, .10);
+  --shadow: 0 18px 55px rgba(0, 0, 0, .30);
+  --shadow-lg: 0 28px 80px rgba(0, 0, 0, .42);
+}
+
+[data-theme="dark"] body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] .navbar {
+  background: rgba(7, 11, 21, .88);
+  border-bottom-color: rgba(255, 255, 255, .10);
+}
+
+[data-theme="dark"] .float-panel {
+  background: rgba(16, 22, 38, .95);
+  color: #fff;
+  border-color: rgba(255, 255, 255, .10);
+}
+
+[data-theme="dark"] .progress {
+  background: rgba(255, 255, 255, .12);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea,
+[data-theme="dark"] .form-group select {
+  background: #0B1120;
+  color: #F6F8FF;
+  border-color: rgba(255, 255, 255, .12);
+}
+
+[data-theme="dark"] .form-group input::placeholder,
+[data-theme="dark"] .form-group textarea::placeholder {
+  color: #6E7992;
+}
+
+[data-theme="dark"] .map-box {
+  background:
+    linear-gradient(32deg, transparent 48%, rgba(116, 70, 232, .18) 49%, transparent 51%),
+    linear-gradient(-30deg, transparent 48%, rgba(116, 70, 232, .15) 49%, transparent 51%),
+    #0E1527;
+}
+
+[data-theme="dark"] .map-road {
+  background: rgba(255, 255, 255, .20);
+}
+
+[data-theme="dark"] .social-btn {
+  background: #141C30;
+  border-color: rgba(255, 255, 255, .12);
+}
+
+[data-theme="dark"] .timeline-dot {
+  border-color: var(--bg);
+}

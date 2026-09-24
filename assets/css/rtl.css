@@ -1,0 +1,96 @@
+/* =========================================================
+   VANTA EVENTS - RTL (RIGHT-TO-LEFT) STYLES
+   ========================================================= */
+
+body.rtl {
+  direction: rtl;
+}
+
+body.rtl .eyebrow::before {
+  background: linear-gradient(270deg, var(--primary), var(--gold));
+}
+
+body.rtl .dashboard-sidebar {
+  left: auto;
+  right: 0;
+}
+
+body.rtl .dashboard-main {
+  grid-column: 2;
+}
+
+body.rtl .timeline::before {
+  left: auto;
+  right: 19px;
+}
+
+body.rtl .timeline-item {
+  padding-left: 0;
+  padding-right: 62px;
+}
+
+body.rtl .timeline-dot {
+  left: auto;
+  right: 8px;
+}
+
+body.rtl .dashboard-link {
+  text-align: right;
+}
+
+body.rtl .footer-links a,
+body.rtl .footer-links button {
+  text-align: right;
+}
+
+body.rtl .footer-links a:hover,
+body.rtl .footer-links button:hover {
+  transform: translateX(-3px);
+}
+
+body.rtl .pricing-list li::before {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+body.rtl .popular {
+  right: auto;
+  left: 16px;
+}
+
+body.rtl #home2 .pricing-card.featured h3 {
+  padding-right: 0;
+  padding-left: 115px;
+}
+
+body.rtl .event-status {
+  left: auto;
+  right: -10px;
+}
+
+body.rtl .venue-status {
+  right: auto;
+  left: -12px;
+}
+
+body.rtl .auth-controls {
+  right: auto;
+  left: 20px;
+}
+
+body.rtl .back-top {
+  right: auto;
+  left: 20px;
+}
+
+@media (max-width: 1000px) {
+  body.rtl .dashboard-sidebar {
+    transform: translateX(110%);
+  }
+  body.rtl .dashboard-sidebar.open {
+    transform: none;
+  }
+  body.rtl .navbar.mobile-open .nav-link {
+    text-align: right;
+  }
+}
