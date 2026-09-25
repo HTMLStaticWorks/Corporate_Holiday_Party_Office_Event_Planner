@@ -28,7 +28,7 @@ function setTheme(theme) {
 
   const dashboardTheme = document.getElementById("dashboardTheme");
   if (dashboardTheme) {
-    dashboardTheme.textContent = `${icon} Theme`;
+    dashboardTheme.textContent = icon;
   }
 }
 
