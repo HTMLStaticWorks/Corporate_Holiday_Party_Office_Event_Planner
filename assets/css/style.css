@@ -1803,6 +1803,76 @@ svg {
   text-decoration: underline;
 }
 
+.contact-social-card {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  box-shadow: var(--shadow);
+}
+
+.contact-social-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-social-content h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.contact-social-content p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.contact-social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.contact-social-icons .social-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(116, 70, 232, 0.08);
+  border: 1px solid rgba(116, 70, 232, 0.15);
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+}
+
+.contact-social-icons .social-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-social-icons .social-btn:hover {
+  background: var(--primary);
+  color: #ffffff;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 20px rgba(116, 70, 232, 0.35);
+  border-color: var(--primary);
+}
+
 .map-box {
   height: 260px;
   border-radius: 20px;
@@ -1990,22 +2060,26 @@ svg {
   gap: 9px;
 }
 
-.social-btn {
-  height: 45px;
+.social-row .social-btn {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
-  border-radius: 10px;
-  display: flex;
+  border-radius: 11px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  font-size: 11px;
-  font-weight: 800;
-  transition: .3s;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.social-btn:hover {
+.social-row .social-btn:hover {
   transform: translateY(-3px);
   border-color: var(--primary);
   color: var(--primary);
@@ -2013,9 +2087,10 @@ svg {
   box-shadow: 0 10px 22px rgba(116, 70, 232, 0.18);
 }
 
-.social-btn svg {
-  width: 17px;
-  height: 17px;
+.social-row .social-btn svg {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
 }
 
 .divider {
@@ -2199,6 +2274,61 @@ svg {
   height: 1px;
   background: rgba(255, 255, 255, .08);
   margin: 14px 7px;
+}
+
+.dashboard-theme-btn,
+#dashboardTheme {
+  background: rgba(244, 208, 111, 0.12) !important;
+  border: 1px solid rgba(244, 208, 111, 0.28) !important;
+  color: #F4D06F !important;
+  font-weight: 700;
+  margin-top: 6px;
+  justify-content: center;
+}
+
+.dashboard-theme-btn:hover,
+#dashboardTheme:hover {
+  background: rgba(244, 208, 111, 0.25) !important;
+  color: #ffffff !important;
+  border-color: #F4D06F !important;
+  box-shadow: 0 4px 14px rgba(244, 208, 111, 0.25);
+  transform: translateY(-2px);
+}
+
+.dashboard-rtl-btn,
+#dashboardRtl {
+  background: rgba(116, 70, 232, 0.14) !important;
+  border: 1px solid rgba(116, 70, 232, 0.3) !important;
+  color: #A78BFA !important;
+  font-weight: 700;
+  margin-top: 6px;
+  justify-content: center;
+}
+
+.dashboard-rtl-btn:hover,
+#dashboardRtl:hover {
+  background: rgba(116, 70, 232, 0.3) !important;
+  color: #ffffff !important;
+  border-color: #A78BFA !important;
+  box-shadow: 0 4px 14px rgba(116, 70, 232, 0.35);
+  transform: translateY(-2px);
+}
+
+.dashboard-logout-btn {
+  background: rgba(239, 68, 68, 0.12) !important;
+  border: 1px solid rgba(239, 68, 68, 0.28) !important;
+  color: #F87171 !important;
+  font-weight: 700;
+  margin-top: 6px;
+  justify-content: center;
+}
+
+.dashboard-logout-btn:hover {
+  background: rgba(239, 68, 68, 0.25) !important;
+  color: #ffffff !important;
+  border-color: #F87171 !important;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.3);
+  transform: translateY(-2px);
 }
 
 .dashboard-main {
@@ -2785,17 +2915,20 @@ svg {
     font-size: 11px;
   }
 
-  /* iPad Mini Footer Navigation Grid Alignment */
+  /* Footer Navigation Grid Alignment for Tablet / iPad */
   .footer-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 28px;
   }
   .footer-brand {
-    grid-column: span 3;
+    grid-column: 1 / -1;
     max-width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
   .footer-brand p {
-    max-width: 600px;
+    max-width: 650px;
   }
 
   .hero-grid,
@@ -3131,11 +3264,64 @@ svg {
     max-width: 100%;
   }
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 20px;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+  .footer-brand p {
+    font-size: 13.5px;
+    margin-top: 14px;
+    margin-bottom: 18px;
+  }
+  .footer-contact-list {
+    gap: 8px;
+  }
+  .footer-contact-item {
+    font-size: 13px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    transition: all 0.25s ease;
+  }
+  .footer h4 {
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .footer h4::before {
+    content: "";
+    width: 3px;
+    height: 12px;
+    background: var(--gold, #F4D06F);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .footer-links {
+    gap: 10px;
+  }
+  .footer-links a,
+  .footer-links button {
+    font-size: 13px;
+    line-height: 1.45;
   }
   .footer-bottom {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  .footer-bottom-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
   }
   .dashboard-content {
     padding: 15px;
@@ -3259,6 +3445,12 @@ svg {
   }
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+    margin-bottom: 4px;
+    padding-bottom: 20px;
   }
   .socials {
     margin-bottom: 10px;
